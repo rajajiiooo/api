@@ -80,13 +80,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if user_id in apis:
         api_url = apis[user_id]["url"]
         await update.message.reply_text(
-            f"👋 Welcome back @{username}!
+    f"""👋 Welcome back @{username}!
 Your API already exists:
 
 {api_url}
 
-⚠️ 1 user can get only 1 API"
-        )
+⚠️ 1 user can get only 1 API"""
+)
         return
 
     # Create new API
@@ -103,13 +103,13 @@ Your API already exists:
     create_api_route(username, apiname)
 
     await update.message.reply_text(
-        f"✅ API created successfully!
+    f"""✅ API created successfully!
 
 Your API link:
 {url}
 
-⚠️ 1 user can get only 1 API"
-    )
+⚠️ 1 user can get only 1 API"""
+)
 
 # ========== MAIN FUNCTIONS ==========
 
